@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Segmentation for Any Business</title>
+    <style>
+        body {
+            background-color: #000000; /* Black background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            color: white; 
+        }
+        h1 {
+            font-size: 3em;
+            color: #fff;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #fff;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="number"] {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1em;
+            width: calc(100% - 22px);
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Segmentation for Any Business Problem</h1>
+    <form action="/predict" method="post">
+        <input type="number" name="Income" placeholder="Annual Income (k$)" required>
+        <input type="number" name="SpendingScore" placeholder="Spending Score (1-100)" required>
+        <button type="submit">Submit</button>
+    </form>
+    {% if cluster is not none %}
+        <h2>Customer Cluster: {{ cluster }}</h2>
+    {% endif %}
+</body>
+</html>
